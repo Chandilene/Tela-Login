@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Login Responsivo</title>
+    <title>Tela de Login</title>
 </head>
 
 <body>
+
     <div class="container">
         <h1>Login</h1>
         <form>
@@ -24,13 +25,21 @@
             <div>
                 <input class="input-login" type="password" name="senha" id="senha" placeholder="Senha"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    title="Deve conter pelo menos um número e uma letra maiúscula e minúscula e pelo menos 8 ou mais caracteres"
+                    title="Deve conter pelo menos um número, uma letra maiúscula, uma letra minúscula e no mínimo 8 caracteres"
                     required>
             </div>
 
             <input type="submit" id="btn-login" value="Login">
 
         </form>
+
+        <div id="aviso">
+            <h3>A senha deve conter:</h3>
+            <p id="minus" class="invalido">Uma <b>letra minúscula</b></p>
+            <p id="maius" class="invalido">Uma <b>letra maiúscula</b></p>
+            <p id="num" class="invalido">Um <b>número</b></p>
+            <p id="length" class="invalido">Mínimo de <b>8 caracteres</b></p>
+        </div>
 
         <div class="links">
             <a href="#">Esqueci a senha</a>
@@ -41,6 +50,7 @@
 
 
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
