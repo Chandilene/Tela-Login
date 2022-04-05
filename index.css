@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top, #464024, #63381e, #0845a8, #001352);
+}
+
+.container {
+  background-image: url(./img/stars2.jpg);
+  background-size: cover;
+  width: 40%;
+  height: 100vh;
+  margin: 0px auto;
+  box-shadow: 0 0 1em #00000075;
+}
+
+.container h1 {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3.125em;
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 60px;
+  color: #18dcff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+form {
+  text-align: center;
+}
+
+.input-login {
+  width: 50%;
+  padding: 20px;
+  background: #20108868;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 35px;
+  box-shadow: 0 0 1em #00000075;
+}
+
+#btn-login {
+  font-family: "Titillium Web", sans-serif;
+  color: #23dbfc;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 53%;
+  padding: 15px;
+  margin-bottom: 30px;
+  background: #2504fc5f;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 1em #00000075;
+}
+
+#btn-login:hover {
+  background: #2504fc8c;
+}
+
+.input-login:hover {
+  background: #17068987;
+}
+
+.links {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #18c7e6;
+}
+
+.links a:hover {
+  color: #00ffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
