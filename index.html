@@ -22,11 +22,15 @@
                 <input class="input-login" type="text" name="usuario" id="usuario" placeholder="Usuário" required>
             </div>
 
+            <div class="mostrar-senha">
+                <input class="check" type="checkbox" onclick="ShowPass()"> <span style="color: #fff;">Mostrar
+                    Senha</span>
+            </div>
+
             <div>
                 <input class="input-login" type="password" name="senha" id="senha" placeholder="Senha"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    title="Deve conter pelo menos um número, uma letra maiúscula, uma letra minúscula e no mínimo 8 caracteres"
-                    required>
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
             </div>
 
             <input type="submit" id="btn-login" value="Login">
