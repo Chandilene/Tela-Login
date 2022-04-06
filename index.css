@@ -73,6 +73,10 @@ form {
   background: #17068987;
 }
 
+.mostrar-senha {
+  margin-right: 210px;
+}
+
 /* mensagem que aparece quando começa a digitar a senha*/
 #aviso {
   display: none;

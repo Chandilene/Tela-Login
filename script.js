@@ -55,3 +55,12 @@ validar.onkeyup = function () {
     length.classList.add("invalido");
   }
 };
+//clicar o input checkbox e mostrar a senha
+function ShowPass() {
+  var inputCheck = document.getElementById("senha");
+  if (inputCheck.type === "password") {
+    inputCheck.type = "text";
+  } else {
+    inputCheck.type = "password";
+  }
+}
