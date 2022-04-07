@@ -31,11 +31,11 @@ body {
 }
 
 form {
-  text-align: center;
+  padding: 0 15%;
 }
 
 .input-login {
-  width: 50%;
+  width: 100%;
   padding: 20px;
   background: #20108868;
   border-radius: 10px;
@@ -53,7 +53,7 @@ form {
   letter-spacing: 4px;
   text-align: center;
   text-transform: uppercase;
-  width: 53%;
+  width: 100%;
   padding: 15px;
   margin-bottom: 30px;
   background: #2504fc5f;
@@ -74,7 +74,7 @@ form {
 }
 
 .mostrar-senha {
-  margin-right: 210px;
+  margin-bottom: 10px;
 }
 
 /* mensagem que aparece quando começa a digitar a senha*/
@@ -125,6 +125,7 @@ form {
 .links a {
   text-decoration: none;
   color: #18c7e6;
+  font-size: 20px;
 }
 
 .links a:hover {
