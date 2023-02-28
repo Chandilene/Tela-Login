@@ -1,60 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <script
+      src="https://kit.fontawesome.com/f714c9efb0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>Tela de Login</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <h1>Login</h1>
-        <form>
+      <h1>Login</h1>
+      <form>
+        <div>
+          <input
+            class="input-login"
+            type="text"
+            name="usuario"
+            id="usuario"
+            placeholder="Usuário"
+            required
+          />
+        </div>
 
-            <div>
-                <input class="input-login" type="text" name="usuario" id="usuario" placeholder="Usuário" required>
-            </div>
+        <div class="campo-senha">
+          <input
+            class="input-login"
+            type="password"
+            name="senha"
+            id="senha"
+            placeholder="Senha"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            required
+          />
 
-            <div class="mostrar-senha">
-                <input class="check" type="checkbox" onclick="ShowPass()"> <span style="color: #fff;">Mostrar
-                    Senha</span>
-            </div>
+          <button type="button" class="mostrar-senha" onclick="ShowPassword()">
+            <i
+              id="icon-esconder-senha"
+              class="fa-sharp fa-solid fa-eye-slash active"
+            ></i>
+            <i id="icon-mostrar-senha" class="fa-solid fa-eye"></i>
+          </button>
+        </div>
 
-            <div>
-                <input class="input-login" type="password" name="senha" id="senha" placeholder="Senha"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-
-            </div>
-
-            <input type="submit" id="btn-login" value="Login">
-
-        </form>
+        <input type="submit" id="btn-login" value="Login" />
 
         <div id="aviso">
-            <h3>A senha deve conter:</h3>
-            <p id="minus" class="invalido">Uma <b>letra minúscula</b></p>
-            <p id="maius" class="invalido">Uma <b>letra maiúscula</b></p>
-            <p id="num" class="invalido">Um <b>número</b></p>
-            <p id="length" class="invalido">Mínimo de <b>8 caracteres</b></p>
+          <h3>A senha deve conter:</h3>
+          <p id="minus" class="invalido">Uma <b>letra minúscula</b></p>
+          <p id="maius" class="invalido">Uma <b>letra maiúscula</b></p>
+          <p id="num" class="invalido">Um <b>número</b></p>
+          <p id="length" class="invalido">Mínimo de <b>8 caracteres</b></p>
         </div>
 
         <div class="links">
-            <a href="#">Esqueci a senha</a>
-        </div>
-        <div class="links">
-            <a href="#">Criar uma conta</a>
-        </div>
+          <a href="#">Esqueci a senha</a>
 
-
+          <a href="#">Criar uma conta</a>
+        </div>
+      </form>
     </div>
-    <script src="./script.js"></script>
-</body>
 
+    <script src="./script.js"></script>
+  </body>
 </html>

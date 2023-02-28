@@ -1,8 +1,8 @@
-var validar = document.getElementById("senha");
-var minusc = document.getElementById("minus");
-var maiusc = document.getElementById("maius");
-var numero = document.getElementById("num");
-var length = document.getElementById("length");
+const validar = document.getElementById("senha");
+const minusc = document.getElementById("minus");
+const maiusc = document.getElementById("maius");
+const numero = document.getElementById("num");
+const length = document.getElementById("length");
 
 // quando o input da senha for clicado mostrará a div 'aviso'
 validar.onfocus = function () {
@@ -17,8 +17,8 @@ validar.onblur = function () {
 // quando a senha começar a ser escrita
 validar.onkeyup = function () {
   // validar a letra minuscula
-  var letraminus = /[a-z]/g;
-  if (validar.value.match(letraminus)) {
+  const regexLetraminus = /[a-z]/g;
+  if (validar.value.match(regexLetraminus)) {
     minusc.classList.remove("invalido");
     minusc.classList.add("valido");
   } else {
@@ -27,8 +27,8 @@ validar.onkeyup = function () {
   }
 
   // validar a letra maiuscula
-  var letramaius = /[A-Z]/g;
-  if (validar.value.match(letramaius)) {
+  const regexLetramaius = /[A-Z]/g;
+  if (validar.value.match(regexLetramaius)) {
     maiusc.classList.remove("invalido");
     maiusc.classList.add("valido");
   } else {
@@ -37,8 +37,8 @@ validar.onkeyup = function () {
   }
 
   // Validar o numero
-  var numeros = /[0-9]/g;
-  if (validar.value.match(numeros)) {
+  const regexNumeros = /[0-9]/g;
+  if (validar.value.match(regexNumeros)) {
     numero.classList.remove("invalido");
     numero.classList.add("valido");
   } else {
@@ -56,11 +56,17 @@ validar.onkeyup = function () {
   }
 };
 //clicar o input checkbox e mostrar a senha
-function ShowPass() {
-  var inputCheck = document.getElementById("senha");
-  if (inputCheck.type === "password") {
-    inputCheck.type = "text";
+function ShowPassword() {
+  const inputPassword = document.getElementById("senha");
+  const iconHidePassword = document.getElementById("icon-esconder-senha");
+  const iconShowPassword = document.getElementById("icon-mostrar-senha");
+
+  iconHidePassword.classList.toggle("active");
+  iconShowPassword.classList.toggle("active");
+
+  if (inputPassword.type === "password") {
+    inputPassword.type = "text";
   } else {
-    inputCheck.type = "password";
+    inputPassword.type = "password";
   }
 }
